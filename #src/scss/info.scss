@@ -1,0 +1,126 @@
+.info-block {
+	margin: 40px 0 99px;
+	@include title(15,400,28);
+
+	@media (max-width: $md3+px) {
+		font-size: 14px;
+		line-height: 26px;
+	}
+
+	& p {
+		margin: 0 0 27px;
+
+		& > a {
+		@include title(15,700,28);
+		color: $mainColor2;
+
+		@media (min-width: 992px) {
+			&:hover {
+				color: $mainColor2Hover;
+				}
+			}
+		}
+	}
+
+	& ul {
+		margin: 31px 0;
+			& > li {
+				position: relative;
+				padding-left: 37px;
+
+				@media (max-width: $md3+px) {
+					padding-left: 25px;
+				}
+
+				&:before {
+					position: absolute;
+					left: -5px;
+					top: 0;
+					font-size: 17px;
+					content: "\e900";
+					font-family: 'icomoon';
+				}
+			}
+	}
+
+	& h4 {
+		@include title(18,700,28);
+		margin-bottom: -1px;
+	}
+
+	&__lines {
+		margin: 56px 0 47px;
+		padding: 55px 0 26px;
+		border-top: 1px solid #cccccc;
+		border-bottom: 1px solid #cccccc;
+	}
+	&__bottom {}
+}
+
+.bottom-info-block {
+	display: flex;
+	margin: 47px 0 47px;
+
+	@media (max-width: $md3+px) {
+		display: block;
+	}
+
+	& h4 {
+		margin-bottom: 28px;
+	}
+
+	& p {
+		max-width: 700px;
+	}
+
+	&__column {
+		&_1 {
+			flex: 1 1 auto;
+			padding-right: 20px;
+
+			@media (max-width: $md3+px) {
+				padding-right: 0;
+			}
+		}
+		&_2 {
+			flex: 0 0 173px;
+			@media (max-width: $md3+px) {
+				margin: 30px auto;
+				max-width: 173px;
+			}
+		}
+	}
+	&__btn-wrap {
+		margin-top: -6px;
+	}
+	&__btn-link {
+		display: inline-block;
+		margin-right: 18px;
+		margin-bottom: 16px;
+
+		& > a {
+			padding: 5px 24px 5px 28px
+		}
+
+		&:nth-child(2) {
+			& > a {
+				padding: 5px 24px 5px 19px;
+
+			}
+		}
+	}
+	&__btn-download {
+		display: inline-block;
+
+		& > a {
+			min-width: 174px;
+			padding: 5px 45px 5px 15px;
+		}
+	}
+	&__img {
+
+		& img {
+			width: 100%;
+		}
+	}
+}

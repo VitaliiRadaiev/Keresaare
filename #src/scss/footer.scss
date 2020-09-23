@@ -1,0 +1,216 @@
+.footer {
+	background-color: $mainColor1;
+	color: #9b9b9b;
+	padding: 77px 0 48px;
+
+	@media (max-width: 575px) {
+		padding: 38px 0 48px;
+		text-align: center;
+	}
+
+	&__content {
+		padding: 0 3.32%;
+
+		@media (max-width: $md1+px) {
+			padding: 0 18px;
+		}
+	}
+
+	&__main {}
+
+	&__line {
+		border-bottom: 2px solid $mainColor2;
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 32px;
+
+		@media (max-width: 575px) {
+			margin-bottom: 21px;
+		}
+	}
+	&__btn-back {
+		flex: 0 0 auto;
+		max-height: 42px;
+		& > a {
+			display: inline-block;
+			position: relative;
+			height: 42px;
+			width: 42px;
+			background-color: $mainColor2;
+			transition: all .2s ease;
+
+			@media (min-width: 992px) {
+				&:hover {
+					background-color: $mainColor2Hover;
+				}
+			}
+
+			&:before {
+				position: absolute;
+				content: url('../img/icons/arrow-up.svg');
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);				
+			}
+		}
+	}
+	&__copy {
+		@include title(12,400,22);
+		text-transform: uppercase;
+		margin-left: -4px;
+
+		@media (max-width: 575px) {
+			margin-left: 0;
+		}
+	}
+}
+
+
+.main-footer {
+	display: flex;
+	flex-wrap: wrap;
+
+	& .kassa {
+		color: #9b9b9b;
+		text-transform: uppercase;
+		& > span {
+			color: #fff;
+		}
+	}
+
+	&__column {
+		padding-right: 15px;
+
+		@media (max-width: $md2+px) {
+			flex: 0 1 33.333%;
+			margin-bottom: 49px;
+		}
+
+		@media (max-width: $md3+px) {
+			flex: 0 1 50%;
+		}
+
+		@media (max-width: 575px) {
+			flex: 0 1 100%;
+			padding-right: 0;
+		}
+		&_1 {
+			flex: 0 1 274 / 1081 * 100%;
+		}
+		&_2 {
+			flex: 0 1 277 / 1081 * 100%;
+
+			@media (max-width: 575px) {
+				margin-bottom: 18px;
+			}
+		}
+		&_3 {
+			flex: 0 1 283 / 1081 * 100%;
+
+			@media (max-width: 575px) {
+				margin-bottom: 4px;
+			}
+		}
+		&_4 {
+			flex: 0 1 247 / 1081 * 100%;
+
+			@media (max-width: 575px) {
+				margin-bottom: -14px;
+				& .main-footer__title {
+					margin-bottom: 15px;
+				}
+			}
+
+		}
+	}
+	&__title {
+		color: #fff;
+		@include title(14,700,14);
+		text-transform: uppercase;
+		margin-bottom: 22px;
+
+		@media (max-width: 575px) {
+			margin-bottom: 12px;
+		}
+	}
+
+	&__list {
+		color: #9b9b9b;
+		@include title(14,400,22);
+		margin-bottom: 25px;
+	}
+	&__second-title {
+		color: #fff;
+		@include title(14,700,14);
+		margin-bottom: 10px;
+
+		& + {
+			color: red;
+		}
+	}
+}
+
+.footer-link {
+	display: inline-block;
+	position: relative;
+	padding-right: 29px;
+	color: #9b9b9b;
+	transition: all .2s ease;
+	padding-left: 32px;
+	margin-bottom: 8px;
+
+	@media (min-width: 992px) {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	@media (max-width: 575px) {
+		margin-bottom: 10px;
+	}
+
+
+	&:before {
+		position: absolute;
+		content: '';
+		bottom: 4px;
+		right: 0;
+		width: 6px;
+		height: 10px;
+		background: url(../img/icons/arrow-right.svg) center no-repeat;
+	}
+
+	&:after {
+		position: absolute;
+		content: '';
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		background: url(../img/icons/arrow-right.svg) center no-repeat;
+	}
+	&_f {
+		padding-left: 25px;
+		&:after {
+			width: 15px;
+			height: 15px;
+			background: url(../img/icons/icon-facebook.svg) center no-repeat;
+			background-size: contain;
+		}
+	}
+	&_k {
+		&:after {
+			width: 20px;
+			height: 20px;
+			background: url(../img/icons/icon-kultuurikava.png) center no-repeat;
+			background-size: contain;
+		}
+	}
+	&_p {
+		&:after {
+			width: 17px;
+			height: 16px;
+			background: url(../img/icons/icon-piletimaailm.png) center no-repeat;
+			background-size: contain;
+		}
+	}
+}

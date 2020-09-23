@@ -1,0 +1,135 @@
+.other-activities {
+	&.other-activities_2 {
+		& .card-block {
+			margin-top: 54px;
+
+			@media (max-width: $md3+px) {
+				margin-top: 40px;
+			}
+		}
+	}
+
+	& .card-block {
+		padding-top: 0px;
+		padding-bottom: 49px;
+		margin-top: 37px;
+
+		@media (max-width: $md3+px) {
+			padding-bottom: 22px;
+			margin-top: 31px;
+		}
+	}
+
+	& .sub-menu__list>li {
+		margin-right: 6%;
+	}
+
+	& .card_2 .card__inner {
+		padding: 27px 10px 32px;
+	}
+
+	& .card_2 .card__hr {
+		margin-bottom: 46px;
+	}
+}
+
+
+// ==== OTHER ACTIVITIES INFO BLOCK =====================================================
+.other-activities-info-block {
+	margin: 28px 0;
+
+	@media (max-width: $md3+px) {
+		margin: 26px 0 22px;
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+
+		@media (max-width: $md3+px) {
+			display: block;
+		}
+	}
+
+	&__text-wrap {
+		flex: 1 1 auto;
+		padding-right: 20px;
+		@include title(14,400,22);
+
+		& p {
+			margin: 20px 0;
+			max-width: 500px;
+		}
+
+		& a {
+			@include title(14,700,22);
+			color: $mainColor2;
+
+			@media (min-width: 992px) {
+				&:hover {
+					color: $mainColor2Hover;
+				}
+			}
+		}
+
+		@media (max-width: $md3+px) {
+			padding-right: 0;
+			margin-bottom: 25px;
+		}
+
+	}
+
+	&__btn-wrap {
+		flex: 0 0 auto;
+	}
+
+	&__btn-link {
+		display: inline-block;
+		margin-right: 6px;
+
+		& .btn-default {
+			padding: 5px 31px 5px 33px;
+		}
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 14px;
+		}
+	}
+	&__btn-popup {
+		display: inline-block;
+
+		& .btn-default {
+			padding: 5px 25px 5px 30px;
+		}
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 14px;
+		}
+	}
+}
+
+// ==== AND OTHER ACTIVITIES INFO BLOCK =====================================================
+
+
+
+// ==== AND OTHER ACTIVITIES EMPTY =====================================================
+.other-activities-empty {
+	min-height: 292px;
+	padding: 1px 0;
+	&__title {
+		@include title(24,700,34);
+		margin: 45px 0 21px; 
+	}
+	&__text {
+		@include title(15,400,28);
+		max-width: 550px;
+
+		& > p {
+			margin: 0px 0 20px;
+		}
+	}
+}
+.container-940 {
+}
+
+// ==== AND OTHER ACTIVITIES EMPTY =====================================================

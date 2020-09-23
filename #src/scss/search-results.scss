@@ -1,0 +1,82 @@
+.search-results-block {
+	margin: 44px 0 108px;
+	min-height: 230px;
+	&__body {
+		@include title(15,400,28);
+	}
+	&__title {
+		text-align: left;
+		margin-bottom: 7px;
+		text-transform: uppercase;
+	}
+
+	&__result-info {
+		margin-bottom: 33px;
+		letter-spacing: .4px;
+	}
+	&__list {}
+}
+
+.list-results {
+
+	& > li {
+		border-bottom: 1px solid #cccccc;
+		padding-bottom: 30px;
+		margin-bottom: 29px;
+	}
+
+	&__category {
+
+	}
+	&__category-link {
+		text-transform: uppercase;
+		@include title(12,700,28);
+		color: $mainColor2;
+		transition: all .2s ease;
+
+		&:not(:first-child) {
+			&:before {
+				content: '>';
+				margin: 0 7px;
+			}
+		}
+
+		@media (min-width: 992px) {
+			&:hover {
+				color: $mainColor2Hover;
+			}
+		}
+	}
+	&__title {
+		@include title(24,700,34);
+		margin-bottom: 15px;
+		margin-top: -10px;
+	}
+	&__text {
+		& > p {
+			margin: 15px 0;
+		}
+	}
+	&__link {
+		margin-top: 21px;
+		& > .link {
+			color: $mainColor2;
+			padding-right: 0;
+			padding-left: 28px;
+			font-weight: 700;
+			font-size: 14px;
+
+			&:before {
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			@media (min-width: 992px) {
+				&:hover {
+					color: $mainColor2Hover;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,315 @@
+.calendar {
+	& .subscription  {
+		margin-bottom: 72px;
+
+		@media(max-width: $md3+px) {
+			margin-bottom: 33px;
+		}
+	}
+}
+
+.calendar-block {
+	margin-bottom: 91px;
+
+	@media(max-width: $md3+px) {
+		margin-bottom: 95px;
+	}
+	&__body {
+		max-width: 945px;
+		margin: 0 auto;
+	}
+	&__top {}
+}
+
+.top-calendar {
+	min-height: 125px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 4px;
+
+	@media(max-width: $md3+px) {
+		min-height: 70px;
+	}
+
+	&__column {
+		display: flex;
+		align-items: center;
+		&_left {
+			flex: 0 1 100%;
+		}
+		&_center {
+			flex: 0 0 auto;
+		}
+		&_right {
+			flex: 0 1 100%;
+			justify-content: flex-start;
+			flex-direction: row-reverse;
+
+			& .top-calendar__btn {
+				margin-right: 0;
+				margin-left: 20px;
+
+				transform: scale(-1, -1);
+			}
+		}
+	}
+	&__btn {
+		margin-right: 20px;
+		& > a {
+			display: inline-block;
+			width: 37px;
+			height: 37px;
+			background-color: $mainColor2;
+			transition: all .2s ease;
+			position: relative;
+
+			@media (min-width: 992px) {
+				&:hover {
+					background-color: $mainColor2Hover;
+				}
+			}
+
+			&:before {
+				    position: absolute;
+				    content: url(../img/icons/arrow-up.svg);
+				    top: 50%;
+				    left: 50%;
+				    transform: translate(-82%,-50%) rotate(-90deg);
+				}
+
+			}
+		
+	}
+	&__month-name {
+		@include title(16,700,16);
+		text-transform: uppercase;
+		margin-top: 6px;
+		@media (max-width: 575px) {
+			display: none;
+		}
+	}
+	&__selected-month {
+		text-transform: uppercase;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.calendar-block {
+	&__list {
+		border-top: 1px solid #cccccc;
+		border-bottom: 1px solid #cccccc;
+
+		@media(max-width: $md2+px) {
+			margin: 0 -18px;
+		}
+
+		& > li {
+			&:not(:last-child) {
+				border-bottom: 1px solid #cccccc;
+			}
+		}
+	}
+}
+
+
+
+
+.item-calendar {
+	display: flex;
+	@include title(14,400,16);
+	min-height: 104px;
+
+	@media(max-width: $md2+px) {
+		flex-wrap: wrap;
+		padding: 5px 20px 26px 14px;
+	}
+
+	&__column {
+		padding: 10px 0;
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			border-right: 1px solid #cccccc;
+
+			@media(max-width: $md2+px) {
+				border: none;
+			}
+		}
+
+		&_1 {
+			flex: 0 0 162px;
+			padding-right: 10px;
+
+			@media(max-width: $md2+px) {
+				order: 1;
+				flex: 1 1 auto;
+			}
+		}
+		&_2 {
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			padding-left: 10px;
+			padding-right: 10px;
+			flex: 1 1 auto;
+
+			@media(max-width: $md2+px) {
+				order: 3;
+				flex: 0 1 100%;
+				padding-left: 4px;
+				padding-top: 11px;
+			}
+		}
+		&_3 {
+			flex: 0 0 141px;
+			flex-direction: column;
+			padding: 0;
+
+			& .item-calendar__text-wrap {
+				display: flex;
+				flex: 1 1 auto;
+				width: 100%;
+
+				@media(max-width: $md2+px) {
+					flex-direction: column;
+					align-items: flex-end;
+				}
+			}
+
+			@media(max-width: $md2+px) {
+				order: 2;
+				flex: 0 0 auto;
+				margin-left: 15px;
+				padding-top: 12px;
+			}
+		}
+		&_4 {
+			flex: 0 0 186px;
+			padding: 10px;
+			@media(max-width: $md2+px) {
+				order: 4;
+				flex: 0 1 100%;
+				padding: 11px 0 10px 4px;
+			}
+		}
+		&_5 {
+			flex: 0 0 153px;
+			padding: 10px 5px;
+			text-align: center;
+
+			@media(max-width: $md2+px) {
+				order: 5;
+				flex: 0 1 100%;
+				padding: 0 0 0 4px;
+				text-align: left;
+			}
+		}
+	}
+	&__month {
+		@include title(50,700,50);
+		margin-right: 10px;
+		text-transform: uppercase;
+	}
+	&__text-wrap {}
+	&__date {
+		@include title(18,700,20);
+	}
+	&__time {
+		@include title(18,700,20);
+	}
+	&__title {
+		& > a {
+			color: $textColor;
+			@include title(22,700,22);
+			transition: all .2s ease;
+
+			@media (min-width: 992px) {
+				&:hover {
+					color: $mainColor2;
+				}
+			}
+		}
+	}
+	&__author {
+		@include title(12,400,16);
+	}
+	&__theater-name {
+		@include title(12,400,16);
+	}
+	&__tipe {
+		flex: 0 0 80px;
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border-right: 1px solid #ccc;
+		max-width: 80px;
+
+		@media(max-width: $md2+px) {
+			border: none;
+			max-width: none;
+			text-align: right;
+			padding: 0;
+			flex: 0 1 auto;
+			margin-bottom: 3px;
+		}
+	}
+	&__duration {
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		white-space: nowrap;
+
+		@media(max-width: $md2+px) {
+			text-align: right;
+			padding: 0;
+		}
+	}
+	&__address {
+		word-break: break-word;
+	}
+	&__btn-buy-ticket {
+		width: 100%;
+
+		& .btn-buy-default {
+			font-size: 12px;
+			min-width: 136px;
+		}
+	}
+
+	&__sold-out {
+		color: #b9b9bb;
+		@include title(12,700,12);
+		text-transform: uppercase;
+		width: 100%;
+		text-align: center;
+
+		@media(max-width: $md2+px) {
+			text-align: left;
+		}
+	}
+	&__only-cash-desk {
+		color: $mainColor2;
+		@include title(12,700,12);
+		text-transform: uppercase;
+		width: 100%;
+		text-align: center;
+
+		@media(max-width: $md2+px) {
+			text-align: left;
+		}
+	}
+}

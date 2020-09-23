@@ -1,0 +1,129 @@
+.card-block {
+	padding: 54px 0 65px;
+
+	@media (max-width: $md3+px) {
+		padding: 33px 0 4px;
+	}
+
+	&__body {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 0 30px;
+	}
+	&__item {
+		margin-bottom: 47px;
+
+		@media (max-width: $md3+px) {
+			margin-bottom: 34px;
+		}
+	}
+	&__title {
+		&.title {
+			text-transform: uppercase;
+			text-align: left;
+			margin-bottom: 31px;
+
+			@media (max-width: $md3+px) {
+				margin-bottom: 25px;
+				margin-left: 5px;
+			}
+		}
+	}
+
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+
+		@media (max-width: 679px) {
+			justify-content: center;
+		}
+
+		& > li {
+			padding: 0 10px;
+			margin-bottom: 23px;
+			width: 33.3333%;
+
+			& > a {
+				display: block;
+				height: 100%;
+			}
+
+			@media (max-width: 900px) {
+				width: 50%;
+			}
+
+			@media (max-width: 575px) {
+				width: 100%;
+			}
+		}
+	}
+}
+.card {
+	width: 100%;
+	background: $mainColor1;
+	color: #fff;
+	text-align: center;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	&_2 {
+		& .card__inner {
+			padding: 27px 15px 32px;
+		}
+
+		& .card__hr {
+			margin: 25px auto 32px;
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 427px;
+	}
+
+	&__inner {
+		flex: 1 1 auto;
+		padding: 22px 15px 32px;
+		display: flex;
+		flex-direction: column;
+
+/*		& > a {
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: column;
+		}*/
+	}
+
+	&__suptitle {
+		@include title(12,700,12);
+		color: $mainColor2;
+		text-transform: uppercase;
+		margin-bottom: 4px;
+	}
+	&__title {
+		@include title(24,700,24);
+		text-transform: uppercase;
+		margin-bottom: 2px;
+		color: #fff;
+	}
+	&__author {
+		@include title(14,700,14);
+		color: #fff;
+	}
+	&__hr-wrap {
+		flex: 1 1 auto;
+	}
+	&__hr {
+		width: 39px;
+		height: 3px;
+		background-color: #ffffff;
+		margin: 13px auto 35px;
+	}
+	&__btn-link {
+
+	}
+}
+
