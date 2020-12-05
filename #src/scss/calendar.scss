@@ -148,8 +148,8 @@
 		}
 
 		&_1 {
-			flex: 0 0 162px;
-			padding-right: 10px;
+			flex: 0 0 184px;
+			padding-right: 2px;
 
 			@media(max-width: $md2+px) {
 				order: 1;
@@ -172,7 +172,7 @@
 			}
 		}
 		&_3 {
-			flex: 0 0 141px;
+			flex: 0 0 146px;
 			flex-direction: column;
 			padding: 0;
 
@@ -233,6 +233,7 @@
 			color: $textColor;
 			@include title(22,700,22);
 			transition: all .2s ease;
+			word-break: break-word;
 
 			@media (min-width: 992px) {
 				&:hover {
@@ -256,6 +257,7 @@
 		text-align: center;
 		border-right: 1px solid #ccc;
 		max-width: 80px;
+		word-break: break-word;
 
 		@media(max-width: $md2+px) {
 			border: none;
@@ -272,6 +274,7 @@
 		justify-content: center;
 		align-items: center;
 		white-space: nowrap;
+		width: 66px;
 
 		@media(max-width: $md2+px) {
 			text-align: right;
